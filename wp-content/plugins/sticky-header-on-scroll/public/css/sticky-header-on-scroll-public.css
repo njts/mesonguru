@@ -1,0 +1,65 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ .top-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .my-header {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+    animation: scrollme 300ms linear forwards;
+  }
+  
+  @keyframes scrollme {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-100%,0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+  }
+
+  
+  .scroll-to-top {
+    width: 40px;
+    height:40px;
+    background-color: rgb(236, 195, 141);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    transition: 1s;
+  }
+  .scroll-to-top .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+  
+  .scroll-to-top {
+    display: none;
+  }
+
+  .scroll-to-top:hover {
+    border-radius: 30px;
+  }
