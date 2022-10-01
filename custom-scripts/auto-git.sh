@@ -23,3 +23,4 @@ echo "$(builddate) build time ${buildtime}         cpu load: ${cpuload} ram load
 git add .
 git commit -m "$(builddate) UTC  auto commit"
 git push -u origin main --force
+/var/www/private-sripts/telegram-notf.sh "$(builddate) build time ${buildtime}         cpu load: ${cpuload} ram load: ${ramload}"
