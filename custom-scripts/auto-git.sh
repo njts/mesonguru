@@ -24,7 +24,7 @@ git commit -m "$(builddate) UTC  auto commit"
 git push -u origin main --force
 
 status=$(git status -s)
-commiturl=$(gh browse  -c -n)
+commiturl=$(git rev-parse HEAD)
 
 /var/www/private-sripts/telegram-notf.sh "
 ---------------changes-----------
