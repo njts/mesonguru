@@ -31,12 +31,12 @@ pstatus=$(cat tglog.txt | awk 'END{print}')
 /var/www/private-sripts/telegram-notf.sh "
 |--------------changes-----------|
 ${pstatus}
-|                       |
+                       |
 |---------------system------------|
 | build time ${buildtime}
 | cpu load: ${cpuload}
 | ram load: ${ramload}
-|                       |
+                       |
 |------------build date----------|
 | $(builddate)
 |--------------------------------------|
