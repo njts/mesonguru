@@ -24,13 +24,12 @@ git commit -m "$(builddate) UTC  auto commit"
 git push -u origin main --force
 status=$(git diff --name-only)
 
-echo "${status}" >> tglog.txt
-pstatus=$(cat tglog.txt | awk 'END{print} ')
+echo "${status}"
 
 # Telegram notification
 /var/www/private-sripts/telegram-notf.sh "
 |--------------changes-----------|
-${pstatus}
+${status}
                        |
 |---------------system------------|
 | build time ${buildtime}
