@@ -34,6 +34,6 @@ build time ${buildtime}
 cpu load: ${cpuload}
 ram load: ${ramload}
 
--------------buildtime----------
+------------build date----------
 $(builddate)
 "
