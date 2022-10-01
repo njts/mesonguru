@@ -1,7 +1,6 @@
 #!/bin/bash
 
 start=`date +%s.%N`
-status=$(git diff --name-only)
 cpuload=$(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
 ramload=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
 
@@ -10,7 +9,7 @@ cd /var/www/html
 wp cron event schedule simply_static_site_export_cron --allow-root
 wp cron event run --due-now --allow-root
 cd /var/www/static
-
+status=$(git diff --name-only)
 # Time stamp
 builddate() {
   date +"%Y/%m/%d %H:%M:%S"
