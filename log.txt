@@ -565,3 +565,14 @@
 2022/10/01 14:05:05 build time 3.636073088         cpu load: 0.00%		 ram load: 75.16%		
 2022/10/01 14:10:05 build time 3.705152975         cpu load: 0.01%		 ram load: 75.57%		
 2022/10/01 14:15:06 build time 4.799217651         cpu load: 0.37%		 ram load: 75.67%		
+2022/10/01 14:20:05 build time 3.698983211         cpu load: 0.01%		 ram load: 75.47%		
+2022/10/01 14:25:14 build time 12.798446945         cpu load: 0.09%		 ram load: 75.57%		
+2022/10/01 14:25:18 build time 14.813961369         cpu load: 0.09%		 ram load: 81.16%		
+2022/10/01 14:28:43 build time 3.578250943         cpu load: 1.04%		 ram load: 77.64%		
+2022/10/01 14:30:05 build time 4.010315220         cpu load: 0.34%		 ram load: 76.40%		
+2022/10/01 14:30:40 build time 3.630113625         cpu load: 0.44%		 ram load: 76.40%		
+2022/10/01 14:31:42 build time 3.684879054         cpu load: 0.19%		 ram load: 76.40%		
+2022/10/01 14:32:58 build time 3.608291857         cpu load: 0.17%		 ram load: 76.60%		
+2022/10/01 14:34:35 build time 3.807185053         cpu load: 0.06%		 ram load: 76.40%		
+2022/10/01 14:35:04 build time 3.442415362         cpu load: 0.15%		 ram load: 76.71%		
+2022/10/01 14:35:15 build time 3.586328385         cpu load: 0.43%		 ram load: 76.71%		
