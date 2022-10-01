@@ -25,11 +25,11 @@ git commit -m "$(builddate) UTC  auto commit"
 git push -u origin main --force
 /var/www/private-sripts/telegram-notf.sh "
 ------------------------------------ 
-changes
+---------------changes--------------
 ------------------------------------
 ${status}
 ------------------------------------
-system
+---------------system---------------
 ------------------------------------
 build time ${buildtime}
 cpu load: ${cpuload}
