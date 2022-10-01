@@ -26,14 +26,14 @@ git push -u origin main --force
 
 # Telegram notification
 /var/www/private-sripts/telegram-notf.sh "
----------------changes-----------
-${status}
+|---------------changes-----------|
+|${status}
                        |
----------------system------------
-build time ${buildtime}
-cpu load: ${cpuload}
-ram load: ${ramload}
+|---------------system------------|
+|build time ${buildtime}
+|cpu load: ${cpuload}
+|ram load: ${ramload}
                        |
-------------build date----------
-$(builddate)
+|------------build date----------|
+|$(builddate)
 "
