@@ -2,5 +2,5 @@
 while true
 do
 ./auto-git.sh
- sleep 300
+ sleep 0
 done
