@@ -29,7 +29,7 @@ pstatus=$(cat tglog.txt | awk 'END{print}')
 
 # Telegram notification
 /var/www/private-sripts/telegram-notf.sh "
-|---------------changes-----------|
+|--------------changes-----------|
 ${pstatus}
 |                       |
 |---------------system------------|
