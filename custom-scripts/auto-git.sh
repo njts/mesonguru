@@ -30,6 +30,6 @@ ${status}
 build time ${buildtime}
 cpu load: ${cpuload}
 ram load: ${ramload}
------------------------------------
+---------------buildtime--------
 $(builddate)
 "
