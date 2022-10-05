@@ -1,4 +1,4 @@
 #!/bin/bash
 
-tmux new -s bot
+tmux new -d -s bot
 
