@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-memlimit=50000 # in KB
+memlimit=150000 # in KB
 start=`date +%s.%N`
 cpuload=$(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
 ramload=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
@@ -42,8 +42,8 @@ ${status}
 "
 mem=$(cat /proc/meminfo | egrep "^MemFree" |awk '{print $2}')
 if (( mem <= $memlimit )); then
-/var/www/private-sripts/telegram-notf.sh "Free memory lower than or $(($memlimit/1024)) MB, so we restart the system";
+/var/www/private-sripts/telegram-notf.sh "Free memory is $(($mem/1024)) MB and it's lower than $(($memlimit/1024)) MB limit, so we restart the system";
 /var/www/static/custom-scripts/reboot.sh
 else
-/var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($memlimit/1024)) MB is free"
+/var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($mem/1024)) MB is free"
 fi
