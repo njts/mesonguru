@@ -40,4 +40,4 @@ ${status}
 | $(builddate)
 |--------------------------------------|
 "
-
+/var/www/private-sripts/mem-check.sh

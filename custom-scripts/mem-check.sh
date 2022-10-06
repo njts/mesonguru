@@ -1,3 +1,7 @@
+#!/bin/bash
+
+memlimit=150000 # in KB
+
 # Reboot if memeory is lower than memory limit
 mem=$(cat /proc/meminfo | egrep "^MemFree" |awk '{print $2}')
 if (( mem <= $memlimit )); then
