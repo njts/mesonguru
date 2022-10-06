@@ -43,5 +43,5 @@ responsetime=$(curl -H 'Cache-Control: no-cache, no-store' -s -w '\nLookup time:
 results="$(builddate) ${responsetime}"
 echo ${results} > responsetime.temp
 sed -e 's/\s\+/,/g' responsetime.temp > responstime.cvs
-rm responstime.temp
+rm responsetime.temp
 /var/www/private-sripts/telegram-notf.sh "${results}"
