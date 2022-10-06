@@ -2,3 +2,4 @@ Lookup time: 0.002288 Connect time: 0.008026 PreXfer time: 0.215443 StartXfer ti
 Lookup time: 0.001385 Connect time: 0.007543 PreXfer time: 0.177763 StartXfer time: 0.190957 Total time: 0.202002
 Lookup time: 0.037024 Connect time: 0.042667 PreXfer time: 0.231873 StartXfer time: 0.239955 Total time: 0.247325
 Lookup time: 0.005525 Connect time: 0.011393 PreXfer time: 0.212620 StartXfer time: 0.224187 Total time: 0.235048
+2022/10/06 12:16:56 Lookup time: 0.001916 Connect time: 0.007620 PreXfer time: 0.189579 StartXfer time: 0.199856 Total time: 0.205367
