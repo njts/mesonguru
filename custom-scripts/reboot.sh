@@ -10,7 +10,6 @@ rebootdate() {
 /var/www/private-sripts/telegram-notf.sh "
 #REBOOT $(rebootdate)
 ---------------system------------
-build time ${buildtime}
 cpu load: ${cpuload}
 ram load: ${ramload}
 
