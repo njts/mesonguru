@@ -6,14 +6,9 @@
           touch $FILE
           while true;
           do
-            DATE=$(date '+%d/%m/%Y %H:%M:%S')
-            ping -c 1 $TARGET &> /dev/null
-            if [[ $? -ne 0 ]]; then
-              echo "ERROR "$DATE
-              echo $DATE >> $FILE
-             /var/www/private-sripts/telegram-notf.sh "@nijatoes f*cking server is down"
-            else
-              echo "OK "$DATE
-            fi
-              sleep 5
-          done
+if curl -s --head  --request GET https://example.com | grep "200 OK" > /dev/null; then 
+   echo "mysite.com is UP"
+else
+   /var/www/private-sripts/telegram-notf.sh "@nijatoes f*cking server is down"
+sleep 5
+  fi
