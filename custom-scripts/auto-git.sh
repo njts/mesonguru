@@ -48,3 +48,5 @@ if (( mem <= $memlimit )); then
 /var/www/static/custom-scripts/reboot.sh
 else
 /var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($mem/1024)) MB is free"
+fi
+done
