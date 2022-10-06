@@ -42,8 +42,8 @@ ${status}
 "
 mem=$(cat /proc/meminfo | egrep "^MemFree" |awk '{print $2}')
 if (( mem <= $memlimit )); then
-/var/www/private-sripts/telegram-notf.sh "Memory lower than or $(($memlimit/1024)) MB, so we kill and restart";
+/var/www/private-sripts/telegram-notf.sh "Free memory lower than or $(($memlimit/1024)) MB, so we restart the system";
 /var/www/static/custom-scripts/reboot.sh
 else
-/var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($memlimit/1024)) MB or more"
+/var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($memlimit/1024)) MB is free"
 fi
