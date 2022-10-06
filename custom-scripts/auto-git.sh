@@ -1,7 +1,7 @@
 #!/bin/bash
 start=`date +%s.%N`
 cpuload=$(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
-ramload=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
+ramload=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2}')
 
 # Build static website
 cd /var/www/html
