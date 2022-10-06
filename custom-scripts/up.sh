@@ -11,7 +11,7 @@
             if [[ $? -ne 0 ]]; then
               echo "ERROR "$DATE
               echo $DATE >> $FILE
-             /var/www/private-sripts/telegram-notf.sh
+             /var/www/private-sripts/telegram-notf.sh "@nijatoes f*cking server is down"
             else
               echo "OK "$DATE
             fi
