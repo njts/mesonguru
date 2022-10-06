@@ -1,3 +1,4 @@
 @reboot /var/www/static/custom-scripts/cron.sh
 */5  * * * * tmux send-keys -t 0 "/var/www/static/custom-scripts/auto-git.sh" Enter
 0 */4 * * * /var/www/static/custom-scripts/reboot.sh
+55 23 * * * /var/www/private-sripts/tg-file.sh
