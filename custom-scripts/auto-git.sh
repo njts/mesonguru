@@ -41,6 +41,5 @@ ${status}
 /var/www/static/custom-scripts/mem-check.sh
 responsetime=$(curl -H 'Cache-Control: no-cache, no-store' -s -w '\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n' -o /dev/null "https://meson.guru/?$(date +%s)")
 results="$(builddate) ${responsetime}"
-echo ${results} >> responstime.txt
-sed -e 's/\s\+/,/g' responstime.txt > responstime.xls
+sed -e 's/\s\+/,/g' ${results} > responstime.xls
 /var/www/private-sripts/telegram-notf.sh "${results}"
