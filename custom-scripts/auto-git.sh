@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 memlimit=150000 # in KB
@@ -12,6 +11,7 @@ wp cron event schedule simply_static_site_export_cron --allow-root
 wp cron event run --due-now --allow-root
 cd /var/www/static
 status=$(git diff --name-only)
+
 # Time stamp
 builddate() {
   date +"%Y/%m/%d %H:%M:%S"
@@ -40,10 +40,11 @@ ${status}
 | $(builddate)
 |--------------------------------------|
 "
+
+# Reboot if memeory is lower than memory limit
 mem=$(cat /proc/meminfo | egrep "^MemFree" |awk '{print $2}')
 if (( mem <= $memlimit )); then
 /var/www/private-sripts/telegram-notf.sh "Free memory is $(($mem/1024)) MB and it's lower than $(($memlimit/1024)) MB limit, so we restart the system";
 /var/www/static/custom-scripts/reboot.sh
 else
 /var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($mem/1024)) MB is free"
-fi
