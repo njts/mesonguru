@@ -1,1 +1,2 @@
 Lookup time: 0.002288 Connect time: 0.008026 PreXfer time: 0.215443 StartXfer time: 0.226544 Total time: 0.236764
+Lookup time: 0.001385 Connect time: 0.007543 PreXfer time: 0.177763 StartXfer time: 0.190957 Total time: 0.202002
