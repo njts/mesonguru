@@ -1,7 +1,7 @@
 #!/bin/bash
         
         FILE=errors.txt
-        TARGET=192.168.0.100000
+        TARGET=meson.guru
 
           touch $FILE
           while true;
