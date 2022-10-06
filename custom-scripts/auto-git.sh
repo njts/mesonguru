@@ -38,4 +38,4 @@ ${status}
 | $(builddate)
 |--------------------------------------|
 "
-/var/www/custom-scripts/mem-check.sh
+/var/www/html/custom-scripts/mem-check.sh
