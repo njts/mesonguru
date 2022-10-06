@@ -47,3 +47,4 @@ sed -e 's/\s\+/,/g' responsetime.temp >> responsetime.csv
 rm responsetime.temp
 /var/www/private-sripts/telegram-notf.sh "${results}"
 clear
+sync; echo 3 > /proc/sys/vm/drop_caches
