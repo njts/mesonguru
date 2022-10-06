@@ -42,6 +42,6 @@ ${status}
 responsetime=$(curl -H 'Cache-Control: no-cache, no-store' -s -w '\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n' -o /dev/null "https://meson.guru/?$(date +%s)")
 results="$(builddate) ${responsetime}"
 echo ${results} > responsetime.temp
-sed -e 's/\s\+/,/g' responsetime.temp > responsetime.cvs
+sed -e 's/\s\+/,/g' responsetime.temp >> responsetime.cvs
 rm responsetime.temp
 /var/www/private-sripts/telegram-notf.sh "${results}"
