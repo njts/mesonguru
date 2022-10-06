@@ -46,3 +46,4 @@ echo ${results} > responsetime.temp
 sed -e 's/\s\+/,/g' responsetime.temp >> responsetime.csv
 rm responsetime.temp
 /var/www/private-sripts/telegram-notf.sh "${results}"
+clear
