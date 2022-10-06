@@ -1,15 +1,18 @@
 #!/bin/bash
+source /var/www/private/var.conf
 
-memlimit=150000 # in KB
+echo $BUILDDIR
+echo $STATIC
+
 start=`date +%s.%N`
 cpuload=$(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
 ramload=$(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')
 
 # Build static website
-cd /var/www/html
+cd $BUILDDIR
 wp cron event schedule simply_static_site_export_cron --allow-root
 wp cron event run --due-now --allow-root
-cd /var/www/static
+cd $STATIC
 status=$(git diff --name-only)
 
 # Time stamp
@@ -27,7 +30,7 @@ git push -u origin main --force
 
 
 # Telegram notification
-/var/www/private-sripts/telegram-notf.sh "
+/var/www/custom-sripts/telegram-notf.sh "
 |--------------changes-----------|
 ${status}
                        |
