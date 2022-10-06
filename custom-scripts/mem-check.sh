@@ -1,6 +1,6 @@
 #!/bin/bash
 
-memlimit=150000 # in KB
+memlimit=50000 # in KB
 
 # Reboot if memeory is lower than memory limit
 mem=$(cat /proc/meminfo | egrep "^MemFree" |awk '{print $2}')
@@ -10,4 +10,3 @@ if (( mem <= $memlimit )); then
 else
 /var/www/private-sripts/telegram-notf.sh "Memory is fine. $(($mem/1024)) MB is free"
 fi
-done
